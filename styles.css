@@ -99,7 +99,8 @@ h1, h2, h3, .hero-title, .section-title {
 .hero-btn-primary {
     display: inline-flex;
     align-items: center;
-    padding: 1rem 2.5rem;
+    justify-content: center;
+    padding: 0.875rem 2rem;
     background: white;
     color: var(--primary-teal);
     font-weight: 600;
@@ -119,7 +120,8 @@ h1, h2, h3, .hero-title, .section-title {
 .hero-btn-secondary {
     display: inline-flex;
     align-items: center;
-    padding: 1rem 2.5rem;
+    justify-content: center;
+    padding: 0.875rem 2rem;
     background: transparent;
     color: white;
     font-weight: 600;
@@ -134,6 +136,13 @@ h1, h2, h3, .hero-title, .section-title {
     background: white;
     color: var(--primary-teal);
     transform: translateY(-3px);
+}
+
+@media (min-width: 768px) {
+    .hero-btn-primary,
+    .hero-btn-secondary {
+        padding: 1rem 2.5rem;
+    }
 }
 
 /* Navigation Links */
@@ -512,6 +521,39 @@ button:focus {
     }
 }
 
+/* Call for Papers - Desktop text alignment fix */
+#call-papers .card li {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#call-papers .card li span:first-child {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+#call-papers .card li span:last-child {
+    flex: 1;
+    text-align: left;
+}
+
+#call-papers .bg-gradient-to-br li {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#call-papers .bg-gradient-to-br li span:first-child {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+#call-papers .bg-gradient-to-br li span:last-child {
+    flex: 1;
+    text-align: left;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -609,6 +651,68 @@ button:focus {
      .items-start {
     align-items: center !important;
   }
+
+    /* Call for Papers Mobile Optimization */
+    #call-papers .card {
+        margin-bottom: 1.5rem;
+        padding: 1.25rem !important;
+    }
+
+    #call-papers .card h3 {
+        font-size: 1.125rem !important;
+        margin-bottom: 1rem !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+
+    #call-papers .card h3 svg {
+        margin-right: 0 !important;
+    }
+
+    #call-papers .card ul {
+        margin-top: 0.75rem;
+    }
+
+    #call-papers .card li {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        align-items: flex-start !important;
+        margin-bottom: 0.75rem;
+        text-align: left !important;
+    }
+
+    #call-papers .card li span:first-child {
+        flex-shrink: 0;
+        margin-top: 0.125rem;
+    }
+
+    #call-papers .card li span:last-child {
+        margin-right: 0 !important;
+        text-align: left !important;
+        display: block;
+    }
+
+    /* Publication section mobile */
+    #call-papers .bg-gradient-to-br {
+        padding: 1.25rem !important;
+    }
+
+    #call-papers .bg-gradient-to-br h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+
+    #call-papers .bg-gradient-to-br h4 {
+        font-size: 1rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    #call-papers .bg-gradient-to-br li {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
 
     /* Center Contact Us on Mobile */
     #contact .grid {
