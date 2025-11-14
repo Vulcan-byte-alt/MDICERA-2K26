@@ -606,6 +606,10 @@ button:focus {
         color: #0d9488;
     }
 
+     .items-start {
+    align-items: center !important;
+  }
+
     /* Center Contact Us on Mobile */
     #contact .grid {
         grid-template-columns: 1fr;
