@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDICERA 2K26 - Multi-Disciplinary International Conference</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Poppins'] antialiased bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/10 backdrop-blur-xl z-50 border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo - Left -->
+                <div class="flex items-center space-x-3 flex-1">
+                    <div class="text-2xl font-bold text-white tracking-widest" style="font-family: 'Cinzel', serif;">
+                        MDICERA 2K26
+                    </div>
+                </div>
+
+                <!-- Nav Links - Center -->
+                <div class="hidden md:flex space-x-8 flex-1 justify-center">
+                    <a href="#about" class="nav-link whitespace-nowrap">About</a>
+                    <a href="#speakers" class="nav-link whitespace-nowrap">Speakers</a>
+                    <a href="#themes" class="nav-link whitespace-nowrap">Themes</a>
+                    <a href="#dates" class="nav-link whitespace-nowrap">Dates</a>
+                    <a href="#contact" class="nav-link whitespace-nowrap">Contact</a>
+                </div>
+
+                <!-- CTA Button - Right -->
+                <div class="hidden md:flex flex-1 justify-end">
+                    <a href="#registration" class="px-6 py-2 bg-white text-teal-600 font-semibold rounded-full hover:bg-teal-50 transition-all duration-300 hover:shadow-lg">
+                        Register Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 pt-20">
+        <div class="flex flex-col items-center space-y-6 py-8">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#speakers" class="mobile-nav-link">Speakers</a>
+            <a href="#themes" class="mobile-nav-link">Themes</a>
+            <a href="#dates" class="mobile-nav-link">Important Dates</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="#registration" class="mt-4 px-8 py-3 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                Register Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 hero-bg"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/80 to-blue-900/80"></div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden opacity-10">
+            <div class="absolute top-20 -left-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 -right-20 w-96 h-96 bg-teal-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 py-32 text-center z-10">
+            <!-- Main Title -->
+            <h1 class="hero-title text-6xl md:text-8xl font-bold mb-8 leading-tight">
+                MDICERA 2K26
+            </h1>
+
+            <!-- Theme -->
+            <h2 class="hero-subtitle text-2xl md:text-4xl font-semibold text-white/90 mb-12 max-w-4xl mx-auto">
+                Sustainable Wisdom: Tradition, Technology & Transformation
+            </h2>
+
+            <!-- Simple Info -->
+            <p class="hero-date-info text-lg md:text-xl text-teal-100 mb-12 font-light">
+                21 & 22 January 2026 • Pazhanji, Thrissur, Kerala
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="#registration" class="hero-btn-primary">
+                    <span>Register Now</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+                <a href="#about" class="hero-btn-secondary">
+                    <span>Learn More</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll-indicator absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Conference Overview Section -->
+    <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Conference Overview</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Info Card 1 -->
+                <div class="card">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">When</h3>
+                    <p class="text-gray-600 mb-2">21 & 22 January 2026</p>
+                    <p class="text-sm text-gray-500">Two-day international conference</p>
+                </div>
+
+                <!-- Info Card 2 -->
+                <div class="card">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Where</h3>
+                    <p class="text-gray-600 mb-2">Pazhanji, Thrissur</p>
+                    <p class="text-sm text-gray-500">Kerala, India</p>
+                </div>
+
+                <!-- Info Card 3 -->
+                <div class="card">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Who</h3>
+                    <p class="text-gray-600 mb-2">Multi-Disciplinary</p>
+                    <p class="text-sm text-gray-500">International scholars & researchers</p>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Join us for a transformative gathering where tradition meets technology. MDICERA 2K26 brings together scholars, researchers, and practitioners from around the world to explore emerging research across multiple disciplines.
+                </p>
+                <p class="text-base text-gray-600 italic">
+                    Organized by <strong>Mar Dionysius College</strong>, Pazhanji
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gradient-to-b from-white via-teal-50/30 to-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">About the Conference</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="fade-in-up">
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        The Multidisciplinary International Conference on Emerging Research Areas (MDICERA 2K26) is being organized for the first time by <strong>Mar Dionysius College, Pazhanji, Thrissur, Kerala</strong>.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Themed <em>"Sustainable Wisdom: Tradition, Technology and Transformation,"</em> this international platform aims to foster meaningful dialogue across disciplines, transcending traditional academic silos to address global challenges.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        With keynote sessions, paper presentations, publication opportunities and best paper awards in each track, the conference promises to be a dynamic academic forum.
+                    </p>
+                </div>
+
+                <div class="fade-in-up">
+                    <div class="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-gray-800">Conference Highlights</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-teal-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">International platform for multidisciplinary research</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-teal-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Keynote sessions by renowned experts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-teal-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Publication opportunities in indexed journals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-teal-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Best paper awards in each track</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-teal-600 mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">Networking with researchers from India and abroad</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About College Section -->
+            <div class="bg-gray-50 rounded-3xl p-8 md:p-12 fade-in-up">
+                <h3 class="text-3xl font-bold mb-6 text-center">About Mar Dionysius College</h3>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <!-- Image Placeholder for College -->
+                        <div class="aspect-video rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://placehold.co/800x450/0d9488/ffffff?text=Mar+Dionysius+College+Campus" alt="Mar Dionysius College Campus" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Established in 1982, Mar Dionysius College, Pazhanji, is committed to the upliftment of rural youth through education. Guided by the motto <strong>"The Lord Gives Wisdom,"</strong> the institution's mission is to empower less privileged students by providing knowledge and fostering personal development to transform society.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Through its focus on rural education, the college plays a vital role in bridging the educational gap and fostering socio-economic progress in the surrounding communities. The college offers a wide range of undergraduate and postgraduate courses across diverse academic disciplines and features a dedicated research department.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizing Committee Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Organizing Committee</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+            </div>
+
+            <!-- Educational Agency & Manager -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16 max-w-5xl mx-auto">
+                <!-- Educational Agency -->
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-6 text-teal-700">Educational Agency</h3>
+                    <div class="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-6 shadow-lg">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-white shadow-md">
+                            <img src="https://ui-avatars.com/api/?name=Baselios+Mathews&size=200&background=0d9488&color=fff&bold=true" alt="H.H. BASELIOS MARTHOMA MATHEWS III" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">H.H. BASELIOS MARTHOMA<br>MATHEWS III</h4>
+                        <p class="text-gray-600 italic text-sm">Catholicos of the East &<br>Malankara Metropolitan</p>
+                    </div>
+                </div>
+
+                <!-- Manager -->
+                <div class="text-center">
+                    <h3 class="text-xl font-bold mb-6 text-teal-700">Manager</h3>
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 shadow-lg">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-white shadow-md">
+                            <img src="https://ui-avatars.com/api/?name=Geevarghese+Yulios&size=200&background=2563eb&color=fff&bold=true" alt="H.G. GEEVARGHESE MAR YULIOS METROPOLITAN" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold mb-2">H.G. GEEVARGHESE MAR<br>YULIOS METROPOLITAN</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Committee Members (Always Visible) -->
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <!-- Principal -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Thomas+Mathew&size=400&background=0d9488&color=fff&bold=true" alt="Dr. Thomas Mathew" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">Dr. Thomas Mathew</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Principal</p>
+                </div>
+
+                <!-- Vice-Principal -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Rejimon+P+M&size=400&background=2563eb&color=fff&bold=true" alt="Prof. Dr. Rejimon P. M." class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">Prof. Dr. Rejimon P. M.</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Vice-Principal</p>
+                </div>
+
+                <!-- Convenor -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Shaheetha+K+S&size=400&background=14b8a6&color=fff&bold=true" alt="Capt. Dr. Shaheetha K. S." class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 mt-4">Capt. Dr. Shaheetha K. S.</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Convenor</p>
+                    <p class="text-sm text-gray-500">9744 988924</p>
+                </div>
+            </div>
+
+            <!-- More Committee Members (Hidden by default) -->
+            <div id="moreCommittee" class="hidden">
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <!-- Secretary -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=Joseph+Cheruvathoor&size=400&background=0891b2&color=fff&bold=true" alt="Rev. Fr. Joseph Cheruvathoor" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Rev. Fr. Joseph Cheruvathoor</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">Secretary (Governing Board)</p>
+                    </div>
+
+                    <!-- Treasurer -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=C+K+Mohanan&size=400&background=0d9488&color=fff&bold=true" alt="Mr. C.K. Mohanan" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Mr. C.K. Mohanan</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">Treasurer (Governing Board)</p>
+                    </div>
+
+                    <!-- Head (Self-Financing Section) -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=G+Rajeev&size=400&background=2563eb&color=fff&bold=true" alt="Dr. G. Rajeev" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Dr. G. Rajeev</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">Head (Self-Financing Section)</p>
+                    </div>
+
+                    <!-- IQAC Coordinator -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=Raji+A+M&size=400&background=14b8a6&color=fff&bold=true" alt="Dr. Raji A.M." class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Dr. Raji A.M.</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">IQAC Coordinator</p>
+                    </div>
+
+                    <!-- NAAC Coordinator -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=Benson+C+C&size=400&background=0891b2&color=fff&bold=true" alt="Lt. Dr. Benson C. C." class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Lt. Dr. Benson C. C.</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">NAAC Coordinator</p>
+                    </div>
+
+                    <!-- Joint Convenor 1 -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=Asha+S+Kutty&size=400&background=0d9488&color=fff&bold=true" alt="Dr. Asha S. Kutty" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Dr. Asha S. Kutty</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">Joint Convenor</p>
+                        <p class="text-sm text-gray-500">97466 43173</p>
+                    </div>
+
+                    <!-- Joint Convenor 2 -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=Manju+K+Mathai&size=400&background=2563eb&color=fff&bold=true" alt="Dr. Manju K. Mathai" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Dr. Manju K. Mathai</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">Joint Convenor</p>
+                        <p class="text-sm text-gray-500">99460 24209</p>
+                    </div>
+
+                    <!-- Joint Convenor 3 -->
+                    <div class="speaker-card-slider">
+                        <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                            <img src="https://ui-avatars.com/api/?name=Aswathy+P+V&size=400&background=14b8a6&color=fff&bold=true" alt="Dr. Aswathy P. V." class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-lg font-bold mb-2 mt-4">Dr. Aswathy P. V.</h3>
+                        <p class="text-sm text-teal-600 mb-1 font-medium">Joint Convenor</p>
+                        <p class="text-sm text-gray-500">9605552610</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toggle Button -->
+            <div class="text-center mt-12">
+                <button id="toggleCommitteeBtn" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 text-white font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <span>View All Committee Members</span>
+                    <svg id="toggleCommitteeIcon" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inauguration Section -->
+    <section class="py-24 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Inauguration</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-3 gap-8 p-8 md:p-12 items-center">
+                        <div class="md:col-span-1">
+                            <!-- Image Placeholder for Chief Guest -->
+                            <div class="aspect-square rounded-2xl overflow-hidden bg-gray-100">
+                                <img src="https://ui-avatars.com/api/?name=Kuruvilla+Joseph&size=400&background=d97706&color=fff&bold=true" alt="Prof. Kuruvilla Joseph" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2 text-center md:text-left">
+                            <p class="text-sm text-teal-600 font-semibold uppercase tracking-wide mb-2">Chief Guest</p>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-3">Prof. Kuruvilla Joseph</h3>
+                            <p class="text-lg text-gray-700 mb-2">Registrar and Dean (Academics)</p>
+                            <p class="text-gray-600 mb-4">Indian Institute of Space Science and Technology</p>
+                            <p class="text-gray-600">Trivandrum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invited Speakers Section -->
+    <section id="speakers" class="py-24 bg-gradient-to-br from-blue-50/40 via-white to-cyan-50/40 relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-100/20 to-blue-100/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-100/20 to-teal-100/20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="section-title text-4xl md:text-5xl font-bold mb-6">Invited Speakers</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-gray-600 text-lg">Distinguished experts from around the world</p>
+            </div>
+
+            <!-- Speakers Grid (showing 4 at a time on desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Speaker 1 -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Joseph+Kuruvilla&size=400&background=0d9488&color=fff&bold=true" alt="Dr Joseph Kuruvilla" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Joseph Kuruvilla</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Data Scientist</p>
+                    <p class="text-sm text-gray-500">Booking.com, Amsterdam</p>
+                </div>
+
+                <!-- Speaker 2 -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Kshitij+Mohan&size=400&background=2563eb&color=fff&bold=true" alt="Dr Kshitij Mohan" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Kshitij Mohan</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Post Doctoral Fellow</p>
+                    <p class="text-sm text-gray-500">Oxford University, UK</p>
+                </div>
+
+                <!-- Speaker 3 -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Manoj+George&size=400&background=14b8a6&color=fff&bold=true" alt="Manoj George" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Manoj George</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Internationally Renowned</p>
+                    <p class="text-sm text-gray-500">Violinist & Music Composer</p>
+                </div>
+
+                <!-- Speaker 4 -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Shalini+M&size=400&background=f43f5e&color=fff&bold=true" alt="Dr Shalini M" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Shalini M</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Assistant Professor</p>
+                    <p class="text-sm text-gray-500">Central University of Kerala</p>
+                </div>
+            </div>
+
+            <!-- View All Speakers Button -->
+            <div class="text-center">
+                <button id="toggleSpeakersBtn" class="btn-secondary inline-flex items-center">
+                    <span>View All Speakers</span>
+                    <svg class="w-5 h-5 ml-2 transition-transform" id="toggleIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Hidden Speakers (Toggle to view) -->
+            <div id="moreSpeakers" class="hidden mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Remaining 8 speakers -->
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Vivek+Ramakrishnan&size=400&background=eab308&color=fff&bold=true" alt="Dr Vivek Ramakrishnan" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Vivek Ramakrishnan</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Assistant Professor</p>
+                    <p class="text-sm text-gray-500">Sree Sankara College</p>
+                </div>
+
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Sylas+V+P&size=400&background=6366f1&color=fff&bold=true" alt="Dr Sylas V P" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Sylas V P</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Associate Professor</p>
+                    <p class="text-sm text-gray-500">MG University, Kottayam</p>
+                </div>
+
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Vimal+Kumar&size=400&background=06b6d4&color=fff&bold=true" alt="Dr Vimal Kumar" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Vimal Kumar</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Senior Librarian</p>
+                    <p class="text-sm text-gray-500">MG University, Kottayam</p>
+                </div>
+
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Jijikumarti+T&size=400&background=84cc16&color=fff&bold=true" alt="Dr Jijikumarti T" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Jijikumarti T</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Associate Professor</p>
+                    <p class="text-sm text-gray-500">St. Pius X College</p>
+                </div>
+
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=S+Victor+Anandkumar&size=400&background=f59e0b&color=fff&bold=true" alt="Dr S. Victor Anandkumar" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr S. Victor Anandkumar</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Professor</p>
+                    <p class="text-sm text-gray-500">Pondicherry University</p>
+                </div>
+
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Kartheek+Mamidi&size=400&background=10b981&color=fff&bold=true" alt="Dr Kartheek Mamidi" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Dr Kartheek Mamidi</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Assistant Professor</p>
+                    <p class="text-sm text-gray-500">University of Calicut</p>
+                </div>
+
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=Padma+Lakshmi&size=400&background=d946ef&color=fff&bold=true" alt="Adv. Padma Lakshmi" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Adv. Padma Lakshmi</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">First Transgender Lawyer</p>
+                    <p class="text-sm text-gray-500">Kerala</p>
+                </div>
+
+                <div class="speaker-card-slider">
+                    <div class="aspect-square rounded-2xl mb-4 overflow-hidden bg-gray-100">
+                        <img src="https://ui-avatars.com/api/?name=K+C+Sunny&size=400&background=64748b&color=fff&bold=true" alt="Prof. K C Sunny" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Prof. K C Sunny</h3>
+                    <p class="text-sm text-teal-600 mb-1 font-medium">Professor of Law</p>
+                    <p class="text-sm text-gray-500">Central University of Kerala</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <svg class="w-16 h-16 mx-auto mb-8 text-teal-400 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <blockquote class="text-2xl md:text-3xl font-light leading-relaxed mb-8 italic">
+                "Sustainable development is the development that meets the needs of the present without compromising the ability of future generations to meet their own needs"
+            </blockquote>
+            <p class="text-teal-400 font-semibold text-lg">— Gro Harlem Brundtland</p>
+        </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section id="dates" class="py-24 bg-gradient-to-br from-emerald-50/50 via-teal-50/30 to-cyan-50/50 relative overflow-hidden">
+        <div class="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-emerald-200/20 to-teal-200/20 rounded-full blur-3xl"></div>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Important Dates</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card">
+                    <div class="text-teal-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Abstract Submission</h3>
+                    <p class="text-3xl font-bold text-gray-800 mb-2">15</p>
+                    <p class="text-gray-600">November 2025</p>
+                </div>
+
+                <div class="card">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Acceptance Notification</h3>
+                    <p class="text-3xl font-bold text-gray-800 mb-2">20</p>
+                    <p class="text-gray-600">November 2025</p>
+                </div>
+
+                <div class="card">
+                    <div class="text-purple-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Full Paper & Registration</h3>
+                    <p class="text-3xl font-bold text-gray-800 mb-2">10</p>
+                    <p class="text-gray-600">December 2025</p>
+                </div>
+
+                <div class="card bg-gradient-to-br from-teal-600 to-blue-600 text-white">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Conference Dates</h3>
+                    <p class="text-3xl font-bold mb-2">21-22</p>
+                    <p>January 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conference Themes Section -->
+    <section id="themes" class="py-24 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-indigo-200/30 to-blue-200/30 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Conference Themes</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore diverse tracks spanning sciences, social sciences, languages, and humanities
+                </p>
+            </div>
+
+            <!-- Show first 6 themes -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Physics -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-blue-500 to-cyan-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Physics</h3>
+                    <ul class="theme-list">
+                        <li>Sustainable Materials Development</li>
+                        <li>Advanced Materials for Energy and Environment</li>
+                        <li>Smart Materials and Shape Memory Alloys</li>
+                        <li>Nanomaterial and Multiscale Modeling</li>
+                        <li>Climate tech and Indigenous solutions</li>
+                        <li>Aerosols and Air Quality</li>
+                        <li>Lightning: Physics & Indigenous wisdom</li>
+                    </ul>
+                </div>
+
+                <!-- Psychology -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-purple-500 to-pink-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Psychology</h3>
+                    <ul class="theme-list">
+                        <li>Digital therapy and telepsychology</li>
+                        <li>Impact of social media on mental health</li>
+                        <li>AI in psychological assessment</li>
+                        <li>Psychology and sustainable lifestyles</li>
+                        <li>Mental health apps</li>
+                        <li>Yoga and Ayurveda in psychological healing</li>
+                        <li>The Psychology of Inner Transformation</li>
+                        <li>Criminal behavior and psychology</li>
+                    </ul>
+                </div>
+
+                <!-- Computer Applications -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-green-500 to-teal-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Computer Applications</h3>
+                    <ul class="theme-list">
+                        <li>AI for Sustainable Societies</li>
+                        <li>Data Science and Analytics</li>
+                        <li>IoT and Embedded Systems</li>
+                        <li>Cybersecurity and Ethics</li>
+                        <li>Blockchain and FinTech</li>
+                        <li>NLP and Computer Vision</li>
+                        <li>Robotics and Automation</li>
+                        <li>Quantum Computing</li>
+                        <li>6G and Future Wireless</li>
+                    </ul>
+                </div>
+
+                <!-- Mathematics & Statistics -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-yellow-500 to-orange-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Mathematics & Statistics</h3>
+                    <ul class="theme-list">
+                        <li>Mathematical Modeling for technological Impact</li>
+                        <li>Applied Mathematics in Global Challenges</li>
+                        <li>Transform Mathematical Tools for Real-World</li>
+                        <li>Mathematics for decision making</li>
+                        <li>Climate & Environmental Statistics</li>
+                        <li>Reliability & Statistical Modelling</li>
+                        <li>Innovations in Statistical Methods</li>
+                    </ul>
+                </div>
+
+                <!-- Commerce & Management -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-red-500 to-pink-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Commerce & Management</h3>
+                    <ul class="theme-list">
+                        <li>Green Marketing and Sustainability</li>
+                        <li>Digital Marketing for Sustainability</li>
+                        <li>Ethical Finance and Green Investment</li>
+                        <li>Accounting and Reporting for Sustainability</li>
+                        <li>Corporate Social Responsibility</li>
+                        <li>Green HRM practices</li>
+                        <li>AI in retail and e-commerce</li>
+                        <li>Digital Transformation</li>
+                    </ul>
+                </div>
+
+                <!-- Economics -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-indigo-500 to-purple-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Economics</h3>
+                    <ul class="theme-list">
+                        <li>Innovation hubs and collaboration</li>
+                        <li>Sustainable agriculture and food security</li>
+                        <li>Renewable energy transition</li>
+                        <li>Global trade and business</li>
+                        <li>Digital economy and data rights</li>
+                        <li>Inclusive growth and social enterprise</li>
+                        <li>Blue economy and marine sustainability</li>
+                        <li>Knowledge economy and skills development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Toggle Button -->
+            <div class="text-center mb-12">
+                <button id="toggleThemesBtn" class="btn-secondary inline-flex items-center justify-center">
+                    <span>View All Themes</span>
+                    <svg class="w-5 h-5 ml-2 transition-transform duration-300" id="toggleThemesIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Hidden themes (initially hidden) -->
+            <div id="moreThemes" class="hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Physical Education -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-green-600 to-lime-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Physical Education</h3>
+                    <ul class="theme-list">
+                        <li>Technology Integration in Sports</li>
+                        <li>Wearable Tech & Data Analytics</li>
+                        <li>Virtual & Augmented Reality Training</li>
+                        <li>AI in Coaching & Performance Tracking</li>
+                        <li>E-Sports & Digital PE Platforms</li>
+                        <li>BOSU Ball Training in Sports</li>
+                        <li>Kettlebell Training in Soccer</li>
+                        <li>Stress and Athletic Performance</li>
+                    </ul>
+                </div>
+
+                <!-- Education -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-cyan-500 to-blue-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Education</h3>
+                    <ul class="theme-list">
+                        <li>Indigenous Knowledge in Modern Curriculum</li>
+                        <li>Adapting Traditional Methods for 21st Century</li>
+                        <li>Platforms for Inclusive Learning</li>
+                        <li>Education for Sustainability & Global Citizenship</li>
+                        <li>Blending Tradition with Modern Pedagogy</li>
+                        <li>Rethinking Education for Sustainable Futures</li>
+                    </ul>
+                </div>
+
+                <!-- Social Work -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-rose-500 to-red-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Social Work</h3>
+                    <ul class="theme-list">
+                        <li>Clinical Social Work, Health, and Well-being</li>
+                        <li>Community Engagement and Empowerment</li>
+                        <li>Arts for Change and Social Justice</li>
+                        <li>Green Social Work and Climate Change</li>
+                        <li>Gender Equality and Human Rights</li>
+                        <li>Digitalization in Sustainable Social Work</li>
+                    </ul>
+                </div>
+
+                <!-- English -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-amber-500 to-orange-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">English</h3>
+                    <ul class="theme-list">
+                        <li>Oral Traditions and Culture</li>
+                        <li>Diaspora and Identity</li>
+                        <li>Hybrid Narratives</li>
+                        <li>Digital Storytelling</li>
+                        <li>Environmental Humanities</li>
+                        <li>Gender and Queer Narratives</li>
+                        <li>Travel Writing</li>
+                    </ul>
+                </div>
+
+                <!-- Library Science -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-violet-500 to-purple-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Library Science</h3>
+                    <ul class="theme-list">
+                        <li>Transforming libraries for sustainability</li>
+                        <li>Innovative library practices</li>
+                        <li>Enhancing library experience with AI</li>
+                        <li>Information literacy in the digital age</li>
+                        <li>Role of libraries in supporting research</li>
+                    </ul>
+                </div>
+
+                <!-- Indian Knowledge System -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-orange-500 to-amber-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Indian Knowledge System</h3>
+                    <ul class="theme-list">
+                        <li>Ayurveda: The Science of Life and Holistic Health</li>
+                        <li>Yoga and Consciousness</li>
+                        <li>Siddha Medicine</li>
+                        <li>Mudra Therapy</li>
+                        <li>Acupressure and Reiki</li>
+                    </ul>
+                </div>
+
+                <!-- Travel and Tourism -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-sky-500 to-blue-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Travel and Tourism</h3>
+                    <ul class="theme-list">
+                        <li>Smart Travel Solutions</li>
+                        <li>Digital Mobility</li>
+                        <li>Tech for Eco-Tourism</li>
+                        <li>Mobile Tourism Apps</li>
+                        <li>Sustainable Hospitality</li>
+                        <li>Cultural Preservation via Tech</li>
+                        <li>Data-Driven Tourism Policy</li>
+                        <li>Community Engagement Through Tech</li>
+                        <li>Smart Destination Management</li>
+                    </ul>
+                </div>
+
+                <!-- Political Science -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-red-600 to-pink-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Political Science</h3>
+                    <ul class="theme-list">
+                        <li>Geo Politics of Climate Change</li>
+                        <li>Digital Diplomacy and Cyber Diplomacy</li>
+                        <li>AI, Algorithms & Political Decision Making</li>
+                        <li>Disaster Governance and AI</li>
+                    </ul>
+                </div>
+
+                <!-- History -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-stone-600 to-amber-700">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">History</h3>
+                    <ul class="theme-list">
+                        <li>Environmental History</li>
+                        <li>Gender and History</li>
+                        <li>Kerala History and Renaissance</li>
+                        <li>History and Technology</li>
+                        <li>Cinema and History</li>
+                    </ul>
+                </div>
+
+                <!-- Sanskrit -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-yellow-600 to-orange-700">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sanskrit</h3>
+                    <ul class="theme-list">
+                        <li>Environmental Consciousness in the Vedas</li>
+                        <li>Principles of Sustainability in Kautilya's Arthaśāstra</li>
+                        <li>Health Preservation and Natural Living in Ayurveda</li>
+                        <li>Vision of Universal Welfare in Sanskrit Literature</li>
+                        <li>Integrating Ancient Knowledge with Modern Technology</li>
+                    </ul>
+                </div>
+
+                <!-- Hindi -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-green-600 to-emerald-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Hindi</h3>
+                    <ul class="theme-list">
+                        <li>Expression of New Scientific Experiments in Contemporary Hindi Literature</li>
+                        <li>Sustainable Knowledge vs. Culture</li>
+                        <li>Climate Crisis and Sustainable Development in Contemporary Hindi Literature</li>
+                        <li>Images of Industrialization and Ecological Crisis in Modern Hindi Literature</li>
+                        <li>Hindi Literature in the Digital Age</li>
+                    </ul>
+                </div>
+
+                <!-- Malayalam -->
+                <div class="theme-card">
+                    <div class="theme-icon bg-gradient-to-br from-teal-700 to-green-700">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Malayalam</h3>
+                    <ul class="theme-list">
+                        <li>Environmental consciousness in Malayalam literary works</li>
+                        <li>Sustainability of technology and Malayalam literature</li>
+                        <li>Environmental movements and green politics in Malayalam poetry</li>
+                        <li>Nature and agrarian culture in Malayalam literary works</li>
+                        <li>Agricultural traditions in Malayalam novels</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Registration Fees Section -->
+    <section id="registration" class="py-24 bg-gradient-to-b from-slate-50 via-blue-50/30 to-slate-50 relative overflow-hidden">
+        <div class="absolute -bottom-20 right-1/4 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-indigo-200/20 rounded-full blur-3xl"></div>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Registration Fees</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-600">All fees in Indian Rupees (₹)</p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <thead class="bg-gradient-to-r from-teal-600 to-blue-600 text-white">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-semibold">Category</th>
+                            <th class="px-6 py-4 text-center font-semibold">Participation</th>
+                            <th class="px-6 py-4 text-center font-semibold">Presentation</th>
+                            <th class="px-6 py-4 text-center font-semibold">Publication (eBook)</th>
+                            <th class="px-6 py-4 text-center font-semibold">Publication (Hardcopy)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">Students (UG & PG)</td>
+                            <td class="px-6 py-4 text-center">₹350</td>
+                            <td class="px-6 py-4 text-center">₹500</td>
+                            <td class="px-6 py-4 text-center">₹1000</td>
+                            <td class="px-6 py-4 text-center">₹2500</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">Research Scholar</td>
+                            <td class="px-6 py-4 text-center">₹500</td>
+                            <td class="px-6 py-4 text-center">₹750</td>
+                            <td class="px-6 py-4 text-center">₹1500</td>
+                            <td class="px-6 py-4 text-center">₹2500</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">Teachers</td>
+                            <td class="px-6 py-4 text-center">₹750</td>
+                            <td class="px-6 py-4 text-center">₹1000</td>
+                            <td class="px-6 py-4 text-center">₹1500</td>
+                            <td class="px-6 py-4 text-center">₹2500</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">International Participants & Industrialists</td>
+                            <td class="px-6 py-4 text-center">₹3000</td>
+                            <td class="px-6 py-4 text-center">₹3000</td>
+                            <td class="px-6 py-4 text-center">₹3000</td>
+                            <td class="px-6 py-4 text-center">₹3000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://forms.gle/B5Kb8kkesTpRsook8" target="_blank" class="btn-primary inline-block">
+                    Register Online
+                    <svg class="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call for Papers Section -->
+    <section class="py-24 bg-gradient-to-br from-amber-50/40 via-white to-orange-50/40 relative overflow-hidden">
+        <div class="absolute -top-20 left-1/3 w-80 h-80 bg-gradient-to-br from-amber-200/20 to-orange-200/20 rounded-full blur-3xl"></div>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Call for Papers</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-600 mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        Abstract Guidelines
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-teal-600 mr-2">•</span>
+                            <span>Maximum 500 words</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-600 mr-2">•</span>
+                            <span>Include title, keywords, and author details</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-600 mr-2">•</span>
+                            <span>Author details: name, designation, institution, email, contact number</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                        Full Paper Guidelines
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            <span>6000-7000 words (approx. 8-12 pages)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            <span>MS Word format, Times New Roman, Font 12, 1.5 spacing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            <span>APA/MLA 9th edition citation format</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-2">•</span>
+                            <span>Double-blind peer review process</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8 mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-center">Publication Opportunities & Awards</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                            Publications
+                        </h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-teal-600 mr-2">✓</span>
+                                <span>Edited book with ISBN for accepted papers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-teal-600 mr-2">✓</span>
+                                <span>Selected papers in peer-reviewed, indexed journals</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-4 flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                            </svg>
+                            Best Paper Awards
+                        </h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-yellow-600 mr-2">✓</span>
+                                <span>Awards in each conference track</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-yellow-600 mr-2">✓</span>
+                                <span>Evaluated on originality and presentation quality</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center bg-gray-900 text-white rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-4">Submit Your Papers</h3>
+                <p class="mb-6 text-gray-300">All abstracts and full papers must be sent to:</p>
+                <a href="mailto:conference@mdcollege.edu.in" class="text-2xl font-bold text-teal-400 hover:text-teal-300 transition-colors">
+                    conference@mdcollege.edu.in
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-br from-teal-900 via-blue-900 to-purple-900 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Mar Dionysius College</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <div>
+                                <p class="font-medium">Location</p>
+                                <p class="text-gray-300">Pazhanji, Thrissur, Kerala, India</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <a href="mailto:conference@mdcollege.edu.in" class="text-teal-300 hover:text-teal-200">
+                                    conference@mdcollege.edu.in
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Organizing Committee</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-medium text-teal-300">Principal</p>
+                            <p class="text-gray-300">Dr. Thomas Mathew</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-teal-300">Convenor</p>
+                            <p class="text-gray-300">Capt. Dr. Shaheetha K. S. - 9744 988924</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-teal-300">Joint Convenors</p>
+                            <p class="text-gray-300">Dr. Asha S. Kutty - 97466 43173</p>
+                            <p class="text-gray-300">Dr. Manju K. Mathai - 99460 24209</p>
+                            <p class="text-gray-300">Dr. Aswathy P. V. - 9605552610</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center">
+                <p class="text-gray-400">
+                    &copy; 2026 MDICERA 2K26 - Mar Dionysius College, Pazhanji. All rights reserved.
+                </p>
+                <p class="text-gray-500 mt-2 text-sm">
+                    Multi-Disciplinary International Conference on Emerging Research Areas
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
