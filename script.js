@@ -24,25 +24,301 @@ mobileMenu.addEventListener('click', (e) => {
     }
 });
 
-// Toggle Speakers
-const toggleBtn = document.getElementById('toggleSpeakersBtn');
-const moreSpeakers = document.getElementById('moreSpeakers');
-const toggleIcon = document.getElementById('toggleIcon');
+// Speaker Carousel
+const carousel = document.getElementById('speakerCarousel');
+const prevBtn = document.getElementById('carouselPrev');
+const nextBtn = document.getElementById('carouselNext');
+const dotsContainer = document.getElementById('carouselDots');
 
-if (toggleBtn && moreSpeakers) {
-    toggleBtn.addEventListener('click', () => {
-        moreSpeakers.classList.toggle('hidden');
-        toggleIcon.classList.toggle('rotate-180');
+// Check if mobile
+const isMobile = () => window.innerWidth < 768;
 
-        const btnText = toggleBtn.querySelector('span');
-        if (moreSpeakers.classList.contains('hidden')) {
-            btnText.textContent = 'View All Speakers';
+if (carousel && prevBtn && nextBtn && dotsContainer) {
+    const items = carousel.querySelectorAll('.speaker-carousel-item');
+    const itemWidth = 152; // 128px width + 24px gap
+    let currentIndex = 0;
+    let visibleItems = 5;
+    let autoScrollInterval;
+
+    // Calculate visible items based on screen width
+    const calculateVisibleItems = () => {
+        const containerWidth = carousel.parentElement.offsetWidth;
+        visibleItems = Math.floor(containerWidth / itemWidth);
+        return Math.max(1, visibleItems);
+    };
+
+    // Calculate max index
+    const getMaxIndex = () => {
+        return Math.max(0, items.length - calculateVisibleItems());
+    };
+
+    // Create dots
+    const createDots = () => {
+        dotsContainer.innerHTML = '';
+        dotsContainer.style.display = 'flex';
+
+        // For mobile, create dots based on individual items for scroll indication
+        const totalDots = isMobile() ? items.length : getMaxIndex() + 1;
+
+        for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('button');
+            dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => {
+                if (isMobile()) {
+                    // On mobile, scroll to the item
+                    const item = items[i];
+                    if (item) {
+                        item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        updateMobileDots(i);
+                    }
+                } else {
+                    goToSlide(i);
+                }
+            });
+            dotsContainer.appendChild(dot);
+        }
+    };
+
+    // Update dots for mobile scroll
+    const updateMobileDots = (activeIndex) => {
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
+        });
+    };
+
+    // Track scroll position on mobile to update dots
+    if (isMobile()) {
+        const carouselWrapper = carousel.parentElement;
+        let scrollTimeout;
+        carouselWrapper.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const scrollLeft = carouselWrapper.scrollLeft;
+                const itemWidth = 152; // 128px + 24px gap
+                const activeIndex = Math.round(scrollLeft / itemWidth);
+                updateMobileDots(Math.min(activeIndex, items.length - 1));
+            }, 50);
+        }, { passive: true });
+    }
+
+    // Update dots
+    const updateDots = () => {
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    };
+
+    // Go to slide (desktop only)
+    const goToSlide = (index) => {
+        if (isMobile()) return; // Skip on mobile - use native scroll
+        const maxIndex = getMaxIndex();
+        currentIndex = Math.max(0, Math.min(index, maxIndex));
+        carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        updateDots();
+    };
+
+    // Next slide
+    const nextSlide = () => {
+        if (isMobile()) return;
+        const maxIndex = getMaxIndex();
+        if (currentIndex < maxIndex) {
+            goToSlide(currentIndex + 1);
         } else {
-            btnText.textContent = 'Show Less';
-            // Scroll to the button smoothly
-            setTimeout(() => {
-                toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 100);
+            goToSlide(0); // Loop back to start
+        }
+    };
+
+    // Previous slide
+    const prevSlide = () => {
+        if (isMobile()) return;
+        const maxIndex = getMaxIndex();
+        if (currentIndex > 0) {
+            goToSlide(currentIndex - 1);
+        } else {
+            goToSlide(maxIndex); // Loop to end
+        }
+    };
+
+    // Auto scroll (desktop only)
+    const startAutoScroll = () => {
+        if (isMobile()) return;
+        autoScrollInterval = setInterval(nextSlide, 4000);
+    };
+
+    const stopAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+    };
+
+    // Event listeners for desktop
+    prevBtn.addEventListener('click', () => {
+        stopAutoScroll();
+        prevSlide();
+        startAutoScroll();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        stopAutoScroll();
+        nextSlide();
+        startAutoScroll();
+    });
+
+    // Pause on hover (desktop)
+    carousel.addEventListener('mouseenter', stopAutoScroll);
+    carousel.addEventListener('mouseleave', startAutoScroll);
+
+    // Resize handler with inline debounce
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            createDots();
+            if (!isMobile()) {
+                goToSlide(Math.min(currentIndex, getMaxIndex()));
+            } else {
+                carousel.style.transform = 'none';
+            }
+        }, 200);
+    });
+
+    // Initialize
+    createDots();
+    if (!isMobile()) {
+        startAutoScroll();
+    }
+}
+
+// Speaker Modal Functionality
+const speakerModal = document.getElementById('speakerModal');
+const modalBackdrop = document.getElementById('modalBackdrop');
+const modalContent = document.getElementById('modalContent');
+const closeModalBtn = document.getElementById('closeModal');
+const speakerItems = document.querySelectorAll('.speaker-carousel-item');
+
+// Modal elements
+const modalImage = document.getElementById('modalImage');
+const modalName = document.getElementById('modalName');
+const modalTitle = document.getElementById('modalTitle');
+const modalDept = document.getElementById('modalDept');
+const modalInstitution = document.getElementById('modalInstitution');
+
+// Open modal function
+const openSpeakerModal = (speakerData) => {
+    if (!speakerModal) return;
+
+    // Populate modal with speaker data
+    modalImage.src = speakerData.image;
+    modalImage.alt = speakerData.name;
+    modalName.textContent = speakerData.name;
+    modalTitle.textContent = speakerData.title;
+
+    // Show/hide department if exists
+    if (speakerData.dept) {
+        modalDept.textContent = speakerData.dept;
+        modalDept.classList.remove('hidden');
+    } else {
+        modalDept.classList.add('hidden');
+    }
+
+    modalInstitution.textContent = speakerData.institution;
+
+    // Show modal
+    speakerModal.classList.remove('hidden');
+    speakerModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+
+    // Trigger animation
+    requestAnimationFrame(() => {
+        modalContent.style.transform = 'scale(1)';
+        modalContent.style.opacity = '1';
+    });
+};
+
+// Close modal function
+const closeSpeakerModal = () => {
+    if (!speakerModal) return;
+
+    speakerModal.classList.add('closing');
+
+    setTimeout(() => {
+        speakerModal.classList.remove('show', 'closing');
+        speakerModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        modalContent.style.transform = 'scale(0.95)';
+        modalContent.style.opacity = '0';
+    }, 200);
+};
+
+// Add click/tap event to speaker items
+if (speakerItems.length > 0 && speakerModal) {
+    speakerItems.forEach(item => {
+        // Track touch for distinguishing tap vs scroll
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+
+        const handleSpeakerClick = () => {
+            const speakerData = {
+                name: item.dataset.name,
+                title: item.dataset.title,
+                dept: item.dataset.dept,
+                institution: item.dataset.institution,
+                image: item.dataset.image
+            };
+            openSpeakerModal(speakerData);
+        };
+
+        // Desktop click
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            handleSpeakerClick();
+        });
+
+        // Mobile touch - track start position
+        item.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+        }, { passive: true });
+
+        // Mobile touch - check if it was a tap (not scroll)
+        item.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const touchDuration = Date.now() - touchStartTime;
+
+            const deltaX = Math.abs(touchEndX - touchStartX);
+            const deltaY = Math.abs(touchEndY - touchStartY);
+
+            // If movement is small and duration is short, treat as tap
+            if (deltaX < 10 && deltaY < 10 && touchDuration < 300) {
+                e.preventDefault();
+                handleSpeakerClick();
+            }
+        }, { passive: false });
+    });
+
+    // Close modal on backdrop click/tap
+    const handleBackdropClose = (e) => {
+        e.stopPropagation();
+        closeSpeakerModal();
+    };
+    modalBackdrop.addEventListener('click', handleBackdropClose);
+    modalBackdrop.addEventListener('touchend', handleBackdropClose);
+
+    // Close modal on close button click/tap
+    const handleCloseBtn = (e) => {
+        e.stopPropagation();
+        closeSpeakerModal();
+    };
+    closeModalBtn.addEventListener('click', handleCloseBtn);
+    closeModalBtn.addEventListener('touchend', handleCloseBtn);
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && speakerModal.classList.contains('show')) {
+            closeSpeakerModal();
         }
     });
 }

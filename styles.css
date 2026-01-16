@@ -850,3 +850,128 @@ button:focus {
         font-size: 0.875rem;
     }
 }
+
+/* VIP Speaker Cards */
+.vip-speaker-card {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vip-speaker-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Speaker Carousel Styles */
+.speaker-carousel-item {
+    transition: all 0.3s ease;
+}
+
+.speaker-carousel-item:hover {
+    transform: scale(1.05);
+}
+
+/* Carousel Navigation Dots */
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-dot.active {
+    width: 24px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #14b8a6, #0ea5e9);
+}
+
+/* Mobile Responsive Carousel */
+@media (max-width: 768px) {
+    .vip-speaker-card {
+        padding: 1rem;
+    }
+
+    .vip-speaker-card .w-48 {
+        width: 140px;
+        height: 140px;
+    }
+
+    .vip-speaker-card h3 {
+        font-size: 1rem;
+    }
+
+    /* Mobile carousel - use native scroll instead of JS transform */
+    .carousel-overflow-wrapper {
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        margin: 0 -1rem;
+        padding: 0 1rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .carousel-overflow-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    #speakerCarousel {
+        transform: none !important; /* Disable JS transform on mobile */
+        padding-right: 1rem;
+    }
+
+    .speaker-carousel-item {
+        scroll-snap-align: center;
+    }
+}
+
+/* Speaker Modal Styles */
+#speakerModal.show {
+    display: flex;
+}
+
+#speakerModal.show #modalContent {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#modalContent {
+    animation: modalSlideIn 0.3s ease-out forwards;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+#speakerModal.closing #modalContent {
+    animation: modalSlideOut 0.2s ease-in forwards;
+}
+
+@keyframes modalSlideOut {
+    from {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.9) translateY(20px);
+        opacity: 0;
+    }
+}
