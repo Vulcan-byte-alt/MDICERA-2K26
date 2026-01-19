@@ -3,24 +3,50 @@ const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
+// SVG icons for burger and close
+const burgerIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>`;
+const closeIcon = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+</svg>`;
+
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    const isHidden = mobileMenu.classList.toggle('hidden');
     document.body.classList.toggle('overflow-hidden');
+
+    // Toggle button color and icon
+    if (!isHidden) {
+        // Menu is open - change to close icon with dark color
+        mobileMenuBtn.classList.remove('text-white');
+        mobileMenuBtn.classList.add('text-gray-800');
+        mobileMenuBtn.innerHTML = closeIcon;
+    } else {
+        // Menu is closed - change back to burger icon with white color
+        mobileMenuBtn.classList.remove('text-gray-800');
+        mobileMenuBtn.classList.add('text-white');
+        mobileMenuBtn.innerHTML = burgerIcon;
+    }
 });
+
+// Function to close mobile menu and reset button
+const closeMobileMenu = () => {
+    mobileMenu.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    mobileMenuBtn.classList.remove('text-gray-800');
+    mobileMenuBtn.classList.add('text-white');
+    mobileMenuBtn.innerHTML = burgerIcon;
+};
 
 // Close mobile menu when clicking on a link
 mobileNavLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-    });
+    link.addEventListener('click', closeMobileMenu);
 });
 
 // Close mobile menu when clicking outside
 mobileMenu.addEventListener('click', (e) => {
     if (e.target === mobileMenu) {
-        mobileMenu.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
+        closeMobileMenu();
     }
 });
 
