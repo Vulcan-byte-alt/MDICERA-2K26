@@ -292,7 +292,7 @@
                         Chief Guests & Inauguration
                     </span>
                 </div>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
+                <div class="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
                     <!-- VIP 1 - Prof. KK Geethakumari - Inauguration -->
                     <div class="vip-speaker-card text-center group">
                         <div class="relative mx-auto w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 mb-3 sm:mb-4 md:mb-6">
@@ -365,6 +365,12 @@
                     <span class="inline-block px-4 py-2 bg-gradient-to-r from-teal-500/20 to-blue-500/20 border border-teal-500/30 rounded-full text-teal-400 text-sm font-semibold uppercase tracking-wider">
                         Invited Speakers
                     </span>
+                    <p class="text-gray-400 text-sm mt-3 flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                        </svg>
+                        Click on any speaker card to view more details
+                    </p>
                 </div>
 
                 <!-- Carousel Container -->
@@ -385,117 +391,189 @@
 
                     <!-- Carousel Track -->
                     <div class="overflow-hidden mx-4 md:mx-8 carousel-overflow-wrapper">
-                        <div id="speakerCarousel" class="flex gap-6 transition-transform duration-500 ease-out md:transition-transform">
+                        <div id="speakerCarousel" class="flex gap-4 transition-transform duration-500 ease-out md:transition-transform">
                             <!-- Speaker 1 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. M. Raji"
                                 data-title="Assistant Professor"
                                 data-dept="Department of Mathematics"
                                 data-institution="Vels Institute of Science, Technology and Advanced Studies, Chennai"
                                 data-image="images/Dr. M. Raji.jpg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-teal-400/30 hover:border-teal-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Dr. M. Raji.jpg" alt="Dr. M. Raji" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-teal-500/20 hover:border-teal-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Dr. M. Raji.jpg" alt="Dr. M. Raji" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. M. Raji</h4>
+                                        <p class="text-xs text-teal-400 truncate">VISTAS, Chennai</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. M. Raji</h4>
-                                <p class="text-xs text-gray-400 truncate">VISTAS, Chennai</p>
                             </div>
 
                             <!-- Speaker 2 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Deepak P"
                                 data-title="Associate Professor"
                                 data-dept=""
                                 data-institution="Queen's University Belfast, UK"
                                 data-image="images/deepak-p.jpg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-blue-400/30 hover:border-blue-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/deepak-p.jpg" alt="Deepak P" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/deepak-p.jpg" alt="Deepak P" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Deepak P</h4>
+                                        <p class="text-xs text-blue-400 truncate">Queen's Univ Belfast, UK</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Deepak P</h4>
-                                <p class="text-xs text-gray-400 truncate">Queen's Univ Belfast, UK</p>
                             </div>
 
                             <!-- Speaker 3 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Tabitha Holmes"
                                 data-title="Ph.D., Associate Professor"
                                 data-dept="Dept of Psychological Sciences"
                                 data-institution="State University of New York, New Paltz"
                                 data-image="images/Tabitha Holmes.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-purple-400/30 hover:border-purple-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Tabitha Holmes.jpeg" alt="Tabitha Holmes" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Tabitha Holmes.jpeg" alt="Tabitha Holmes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Tabitha Holmes</h4>
+                                        <p class="text-xs text-purple-400 truncate">SUNY, New York</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Tabitha Holmes</h4>
-                                <p class="text-xs text-gray-400 truncate">SUNY, New York</p>
                             </div>
 
                             <!-- Speaker 4 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Julie Simon Macariola"
                                 data-title="Faculty of Psychology, Manager - International Affairs"
                                 data-dept=""
                                 data-institution="Shinawatra University, Bangkok, Thailand"
                                 data-image="images/Julie Simon Macariola.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-pink-400/30 hover:border-pink-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Julie Simon Macariola.jpeg" alt="Julie Simon Macariola" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-pink-500/20 hover:border-pink-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Julie Simon Macariola.jpeg" alt="Julie Simon Macariola" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Julie Macariola</h4>
+                                        <p class="text-xs text-pink-400 truncate">Shinawatra Univ, Thailand</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Julie Macariola</h4>
-                                <p class="text-xs text-gray-400 truncate">Shinawatra Univ, Thailand</p>
                             </div>
 
                             <!-- Speaker 5 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Abd. Ghofur"
                                 data-title="Assoc. Prof., M.Pd, C.ED., C.PS., C.HL"
                                 data-dept=""
                                 data-institution="UIN Madura, Indonesia"
                                 data-image="images/Dr. Abd. Ghofur.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Dr. Abd. Ghofur.jpeg" alt="Dr. Abd. Ghofur" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Dr. Abd. Ghofur.jpeg" alt="Dr. Abd. Ghofur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Abd. Ghofur</h4>
+                                        <p class="text-xs text-cyan-400 truncate">UIN Madura, Indonesia</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Abd. Ghofur</h4>
-                                <p class="text-xs text-gray-400 truncate">UIN Madura, Indonesia</p>
                             </div>
 
                             <!-- Speaker 6 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Mr. Sanu Kurien"
                                 data-title="Data Scientist"
                                 data-dept=""
                                 data-institution="i-Med Radiology Group, Sydney, Australia"
                                 data-image="images/Mr Sanu Kurien .jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-teal-400/30 hover:border-teal-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Mr Sanu Kurien .jpeg" alt="Mr. Sanu Kurien" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-teal-500/20 hover:border-teal-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Mr Sanu Kurien .jpeg" alt="Mr. Sanu Kurien" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Sanu Kurien</h4>
+                                        <p class="text-xs text-teal-400 truncate">i-Med Radiology, Sydney</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Sanu Kurien</h4>
-                                <p class="text-xs text-gray-400 truncate">i-Med Radiology, Sydney</p>
                             </div>
 
                             <!-- Speaker 7 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Manisha Kumar"
                                 data-title="Faculty Member"
                                 data-dept="Faculty of Business and Creative Industries"
                                 data-institution="University of South Wales, Newport, United Kingdom"
                                 data-image="images/Dr Manisha Kumar.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-blue-400/30 hover:border-blue-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Dr Manisha Kumar.jpeg" alt="Dr Manisha Kumar" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Dr Manisha Kumar.jpeg" alt="Dr Manisha Kumar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr Manisha Kumar</h4>
+                                        <p class="text-xs text-blue-400 truncate">Univ of South Wales, UK</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr Manisha Kumar</h4>
-                                <p class="text-xs text-gray-400 truncate">Univ of South Wales, UK</p>
                             </div>
 
                             <!-- Speaker 8 -->
-                            <div class="speaker-carousel-item flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="speaker-carousel-item flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Sandeep"
                                 data-title="Research Assosciate"
                                 data-dept=""
                                 data-institution="University of Strathclyde, Glasgow, Scotland, UK"
                                 data-image="images/Dr. Sandeep.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-purple-400/30 hover:border-purple-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Dr. Sandeep.jpeg" alt="Dr. Sandeep" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Dr. Sandeep.jpeg" alt="Dr. Sandeep" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Sandeep</h4>
+                                        <p class="text-xs text-purple-400 truncate">Univ of Strathclyde, UK</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Sandeep</h4>
-                                <p class="text-xs text-gray-400 truncate">Univ of Strathclyde, UK</p>
                             </div>
 
                         </div>
@@ -528,86 +606,16 @@
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto">
                     Meet the dedicated team behind MDICERA 2K26
                 </p>
+                <p class="text-gray-400 text-sm mt-3 flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                    </svg>
+                    Click on any member card to view more details
+                </p>
             </div>
 
-            <!-- Key Committee Members Section - NO SCROLL -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <span class="inline-block px-4 py-2 bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border border-amber-500/30 rounded-full text-amber-400 text-sm font-semibold uppercase tracking-wider">
-                        Committee
-                    </span>
-                </div>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
-                    <!-- Committee Member 1 - Educational Agency -->
-                    <div class="vip-speaker-card text-center group">
-                        <div class="relative mx-auto w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 mb-3 sm:mb-4 md:mb-6">
-                            <div class="absolute inset-0 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                            <div class="relative w-full h-full rounded-full overflow-hidden border-2 sm:border-4 border-amber-400/50 shadow-2xl">
-                                <img src="images/Staff/Ist tirumeni.jpeg" alt="H.H. Baselios Marthoma Mathews III" class="w-full h-full object-cover">
-                            </div>
-                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full text-[8px] sm:text-[10px] md:text-xs font-bold text-gray-900 whitespace-nowrap shadow-lg">
-                                EDUCATIONAL AGENCY
-                            </div>
-                        </div>
-                        <h3 class="text-xs sm:text-base md:text-xl font-bold text-white mb-0.5 sm:mb-1 md:mb-2">H.H. Baselios Marthoma Mathews III</h3>
-                        <p class="text-amber-400 font-medium text-[10px] sm:text-xs md:text-sm">Catholicos of the East</p>
-                    </div>
-
-                    <!-- Committee Member 2 - Manager -->
-                    <div class="vip-speaker-card text-center group">
-                        <div class="relative mx-auto w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 mb-3 sm:mb-4 md:mb-6">
-                            <div class="absolute inset-0 bg-gradient-to-br from-teal-400 to-cyan-600 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                            <div class="relative w-full h-full rounded-full overflow-hidden border-2 sm:border-4 border-teal-400/50 shadow-2xl">
-                                <img src="images/Staff/Youlios.jpg" alt="H.G. Geevarghese Mar Yulios" class="w-full h-full object-cover">
-                            </div>
-                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full text-[8px] sm:text-[10px] md:text-xs font-bold text-white whitespace-nowrap shadow-lg">
-                                MANAGER
-                            </div>
-                        </div>
-                        <h3 class="text-xs sm:text-base md:text-xl font-bold text-white mb-0.5 sm:mb-1 md:mb-2">H.G. Geevarghese Mar Yulios</h3>
-                        <p class="text-teal-400 font-medium text-[10px] sm:text-xs md:text-sm">Metropolitan</p>
-                    </div>
-
-                    <!-- Committee Member 3 - Secretary -->
-                    <div class="vip-speaker-card text-center group">
-                        <div class="relative mx-auto w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 mb-3 sm:mb-4 md:mb-6">
-                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-400 to-green-600 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                            <div class="relative w-full h-full rounded-full overflow-hidden border-2 sm:border-4 border-emerald-400/50 shadow-2xl">
-                                <img src="images/Staff/Rev. Fr. Joseph Cheruvathoor.jpeg" alt="Rev. Fr. Joseph Cheruvathoor" class="w-full h-full object-cover">
-                            </div>
-                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full text-[8px] sm:text-[10px] md:text-xs font-bold text-white whitespace-nowrap shadow-lg">
-                                SECRETARY
-                            </div>
-                        </div>
-                        <h3 class="text-xs sm:text-base md:text-xl font-bold text-white mb-0.5 sm:mb-1 md:mb-2">Rev. Fr. Joseph Cheruvathoor</h3>
-                        <p class="text-emerald-400 font-medium text-[10px] sm:text-xs md:text-sm">Governing Board</p>
-                    </div>
-
-                    <!-- Committee Member 4 - Treasurer -->
-                    <div class="vip-speaker-card text-center group">
-                        <div class="relative mx-auto w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 mb-3 sm:mb-4 md:mb-6">
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-600 rounded-full blur-lg opacity-50 group-hover:opacity-70 transition-opacity"></div>
-                            <div class="relative w-full h-full rounded-full overflow-hidden border-2 sm:border-4 border-purple-400/50 shadow-2xl">
-                                <img src="images/Staff/mohanan.jpeg" alt="Mr. C.K. Mohanan" class="w-full h-full object-cover">
-                            </div>
-                            <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 sm:px-3 sm:py-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-[8px] sm:text-[10px] md:text-xs font-bold text-white whitespace-nowrap shadow-lg">
-                                TREASURER
-                            </div>
-                        </div>
-                        <h3 class="text-xs sm:text-base md:text-xl font-bold text-white mb-0.5 sm:mb-1 md:mb-2">Mr. C.K. Mohanan</h3>
-                        <p class="text-purple-400 font-medium text-[10px] sm:text-xs md:text-sm">Governing Board</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Organizing Committee Members Carousel - WITH SCROLL -->
+            <!-- Committee Members Carousel -->
             <div class="mt-12">
-                <div class="text-center mb-8">
-                    <span class="inline-block px-4 py-2 bg-gradient-to-r from-teal-500/20 to-blue-500/20 border border-teal-500/30 rounded-full text-teal-400 text-sm font-semibold uppercase tracking-wider">
-                        Organizing Committee
-                    </span>
-                </div>
-
                 <div class="relative">
                     <!-- Left Arrow -->
                     <button id="committeeCarouselPrev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hidden md:flex">
@@ -625,127 +633,300 @@
 
                     <!-- Carousel Track -->
                     <div class="overflow-hidden mx-4 md:mx-8 carousel-overflow-wrapper">
-                        <div id="committeeCarouselTrack" class="flex gap-6 transition-transform duration-500 ease-out md:transition-transform">
+                        <div id="committeeCarouselTrack" class="flex gap-4 transition-transform duration-500 ease-out md:transition-transform">
+                            <!-- Educational Agency -->
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
+                                data-name="H.H. Baselios Marthoma Mathews III"
+                                data-title="Educational Agency"
+                                data-dept="Catholicos of the East"
+                                data-institution="Mar Dionysius College"
+                                data-image="images/Staff/Ist tirumeni.jpeg">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-amber-500/20 hover:border-amber-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-amber-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/Ist tirumeni.jpeg" alt="H.H. Baselios Marthoma Mathews III" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate" title="H.H. Baselios Marthoma Mathews III">H.H. Baselios Marthoma Mathews III</h4>
+                                        <p class="text-xs text-amber-400 truncate">Educational Agency</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Manager -->
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
+                                data-name="H.G. Geevarghese Mar Yulios"
+                                data-title="Manager"
+                                data-dept="Metropolitan"
+                                data-institution="Mar Dionysius College"
+                                data-image="images/Staff/Youlios.jpg">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-teal-500/20 hover:border-teal-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/Youlios.jpg" alt="H.G. Geevarghese Mar Yulios" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">H.G. Geevarghese Mar Yulios</h4>
+                                        <p class="text-xs text-teal-400 truncate">Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Secretary -->
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
+                                data-name="Rev. Fr. Joseph Cheruvathoor"
+                                data-title="Secretary"
+                                data-dept="Governing Board"
+                                data-institution="Mar Dionysius College"
+                                data-image="images/Staff/Rev. Fr. Joseph Cheruvathoor.jpeg">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-emerald-500/20 hover:border-emerald-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/Rev. Fr. Joseph Cheruvathoor.jpeg" alt="Rev. Fr. Joseph Cheruvathoor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Rev. Fr. Joseph Cheruvathoor</h4>
+                                        <p class="text-xs text-emerald-400 truncate">Secretary</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Treasurer -->
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
+                                data-name="Mr. C.K. Mohanan"
+                                data-title="Treasurer"
+                                data-dept="Governing Board"
+                                data-institution="Mar Dionysius College"
+                                data-image="images/Staff/mohanan.jpeg">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/mohanan.jpeg" alt="Mr. C.K. Mohanan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Mr. C.K. Mohanan</h4>
+                                        <p class="text-xs text-purple-400 truncate">Treasurer</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Principal -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Thomas Mathew"
                                 data-title="Principal"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/Dr. Thomas Mathew.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-teal-400/30 hover:border-teal-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/Dr. Thomas Mathew.jpeg" alt="Dr. Thomas Mathew" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/Dr. Thomas Mathew.jpeg" alt="Dr. Thomas Mathew" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Thomas Mathew</h4>
+                                        <p class="text-xs text-blue-400 truncate">Principal</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Thomas Mathew</h4>
-                                <p class="text-xs text-gray-400 truncate">Principal</p>
                             </div>
 
                             <!-- Vice-Principal -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Prof. Dr. Rejimon P. M."
                                 data-title="Vice-Principal"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/rejimon.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-blue-400/30 hover:border-blue-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/rejimon.jpeg" alt="Prof. Dr. Rejimon P. M." class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/rejimon.jpeg" alt="Prof. Dr. Rejimon P. M." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Prof. Dr. Rejimon P. M.</h4>
+                                        <p class="text-xs text-cyan-400 truncate">Vice-Principal</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Prof. Dr. Rejimon P. M.</h4>
-                                <p class="text-xs text-gray-400 truncate">Vice-Principal</p>
                             </div>
 
                             <!-- Convenor -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Capt. Dr. Shaheetha K. S."
                                 data-title="Convenor"
                                 data-phone="9744 988924"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/shaheetha.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/shaheetha.jpeg" alt="Capt. Dr. Shaheetha K. S." class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-pink-500/20 hover:border-pink-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/shaheetha.jpeg" alt="Capt. Dr. Shaheetha K. S." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Capt. Dr. Shaheetha K. S.</h4>
+                                        <p class="text-xs text-pink-400 truncate">Convenor</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Capt. Dr. Shaheetha K. S.</h4>
-                                <p class="text-xs text-gray-400 truncate">Convenor</p>
                             </div>
 
                             <!-- Head (Self-Financing Section) -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. G. Rajeev"
                                 data-title="Head"
                                 data-dept="Self-Financing Section"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/rajeev.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-indigo-400/30 hover:border-indigo-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/rajeev.jpeg" alt="Dr. G. Rajeev" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-indigo-500/20 hover:border-indigo-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/rajeev.jpeg" alt="Dr. G. Rajeev" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. G. Rajeev</h4>
+                                        <p class="text-xs text-indigo-400 truncate">Head, SF Section</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. G. Rajeev</h4>
-                                <p class="text-xs text-gray-400 truncate">Head, SF Section</p>
                             </div>
 
                             <!-- IQAC Coordinator -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Raji A.M."
                                 data-title="IQAC Coordinator"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/raji.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-teal-400/30 hover:border-teal-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/raji.jpeg" alt="Dr. Raji A.M." class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-teal-500/20 hover:border-teal-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-teal-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/raji.jpeg" alt="Dr. Raji A.M." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Raji A.M.</h4>
+                                        <p class="text-xs text-teal-400 truncate">IQAC Coordinator</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Raji A.M.</h4>
-                                <p class="text-xs text-gray-400 truncate">IQAC Coordinator</p>
                             </div>
 
                             <!-- NAAC Coordinator -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Lt. Dr. Benson C. C."
                                 data-title="NAAC Coordinator"
                                 data-institution="Mar Dionysius College"
-                                data-image="https://ui-avatars.com/api/?name=Benson+C+C&size=400&background=0891b2&color=fff&bold=true">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
-                                    <img src="https://ui-avatars.com/api/?name=Benson+C+C&size=400&background=0891b2&color=fff&bold=true" alt="Lt. Dr. Benson C. C." class="w-full h-full object-cover">
+                                data-image="images/Staff/benson.jpeg">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/benson.jpeg" alt="Lt. Dr. Benson C. C." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Lt. Dr. Benson C. C.</h4>
+                                        <p class="text-xs text-cyan-400 truncate">NAAC Coordinator</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Lt. Dr. Benson C. C.</h4>
-                                <p class="text-xs text-gray-400 truncate">NAAC Coordinator</p>
                             </div>
 
                             <!-- Joint Convenor 1 -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Asha S. Kutty"
                                 data-title="Joint Convenor"
                                 data-phone="97466 43173"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/asha.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-pink-400/30 hover:border-pink-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/asha.jpeg" alt="Dr. Asha S. Kutty" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-pink-500/20 hover:border-pink-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/asha.jpeg" alt="Dr. Asha S. Kutty" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Asha S. Kutty</h4>
+                                        <p class="text-xs text-pink-400 truncate">Joint Convenor</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Asha S. Kutty</h4>
-                                <p class="text-xs text-gray-400 truncate">Joint Convenor</p>
                             </div>
 
                             <!-- Joint Convenor 2 -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Manju K. Mathai"
                                 data-title="Joint Convenor"
                                 data-phone="99460 24209"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/manju.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-purple-400/30 hover:border-purple-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/manju.jpeg" alt="Dr. Manju K. Mathai" class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/manju.jpeg" alt="Dr. Manju K. Mathai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Manju K. Mathai</h4>
+                                        <p class="text-xs text-purple-400 truncate">Joint Convenor</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Manju K. Mathai</h4>
-                                <p class="text-xs text-gray-400 truncate">Joint Convenor</p>
                             </div>
 
                             <!-- Joint Convenor 3 -->
-                            <div class="committee-member flex-shrink-0 w-32 text-center cursor-pointer"
+                            <div class="committee-member flex-shrink-0 w-40 text-center cursor-pointer group"
                                 data-name="Dr. Aswathy P. V."
                                 data-title="Joint Convenor"
                                 data-phone="9605552610"
                                 data-institution="Mar Dionysius College"
                                 data-image="images/Staff/aswathy.jpeg">
-                                <div class="w-24 h-24 mx-auto mb-3 rounded-full overflow-hidden border-2 border-rose-400/30 hover:border-rose-400 transition-all duration-300 hover:scale-105">
-                                    <img src="images/Staff/aswathy.jpeg" alt="Dr. Aswathy P. V." class="w-full h-full object-cover">
+                                <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden border border-rose-500/20 hover:border-rose-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-rose-500/20 hover:-translate-y-1 relative">
+                                    <div class="absolute top-2 right-2 z-10 bg-white/10 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                        <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="relative w-full h-40 overflow-hidden">
+                                        <img src="images/Staff/aswathy.jpeg" alt="Dr. Aswathy P. V." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                    </div>
+                                    <div class="p-3">
+                                        <h4 class="text-sm font-bold text-white mb-1 truncate">Dr. Aswathy P. V.</h4>
+                                        <p class="text-xs text-rose-400 truncate">Joint Convenor</p>
+                                    </div>
                                 </div>
-                                <h4 class="text-sm font-semibold text-white truncate">Dr. Aswathy P. V.</h4>
-                                <p class="text-xs text-gray-400 truncate">Joint Convenor</p>
                             </div>
 
                         </div>

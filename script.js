@@ -61,7 +61,7 @@ const isMobile = () => window.innerWidth < 768;
 
 if (carousel && prevBtn && nextBtn && dotsContainer) {
     const items = carousel.querySelectorAll('.speaker-carousel-item');
-    const itemWidth = 152; // 128px width + 24px gap
+    const itemWidth = 176; // 160px width + 16px gap
     let currentIndex = 0;
     let visibleItems = 5;
     let autoScrollInterval;
@@ -121,7 +121,7 @@ if (carousel && prevBtn && nextBtn && dotsContainer) {
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
                 const scrollLeft = carouselWrapper.scrollLeft;
-                const itemWidth = 152; // 128px + 24px gap
+                const itemWidth = 176; // 160px + 16px gap
                 const activeIndex = Math.round(scrollLeft / itemWidth);
                 updateMobileDots(Math.min(activeIndex, items.length - 1));
             }, 50);
@@ -357,7 +357,7 @@ const committeeDotsContainer = document.getElementById('committeeCarouselDots');
 
 if (committeeCarousel && committeePrevBtn && committeeNextBtn && committeeDotsContainer) {
     const committeeItems = committeeCarousel.querySelectorAll('.committee-member');
-    const committeeItemWidth = 152; // 128px width + 24px gap
+    const committeeItemWidth = 176; // 160px width + 16px gap
     let committeeCurrentIndex = 0;
     let committeeVisibleItems = 5;
     let committeeAutoScrollInterval;
@@ -417,7 +417,8 @@ if (committeeCarousel && committeePrevBtn && committeeNextBtn && committeeDotsCo
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(() => {
                 const scrollLeft = committeeCarouselWrapper.scrollLeft;
-                const activeIndex = Math.round(scrollLeft / committeeItemWidth);
+                const itemWidth = 176; // 160px + 16px gap
+                const activeIndex = Math.round(scrollLeft / itemWidth);
                 updateCommitteeMobileDots(Math.min(activeIndex, committeeItems.length - 1));
             }, 50);
         }, { passive: true });
