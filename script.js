@@ -349,6 +349,220 @@ if (speakerItems.length > 0 && speakerModal) {
     });
 }
 
+// Committee Carousel
+const committeeCarousel = document.getElementById('committeeCarouselTrack');
+const committeePrevBtn = document.getElementById('committeeCarouselPrev');
+const committeeNextBtn = document.getElementById('committeeCarouselNext');
+const committeeDotsContainer = document.getElementById('committeeCarouselDots');
+
+if (committeeCarousel && committeePrevBtn && committeeNextBtn && committeeDotsContainer) {
+    const committeeItems = committeeCarousel.querySelectorAll('.committee-member');
+    const committeeItemWidth = 152; // 128px width + 24px gap
+    let committeeCurrentIndex = 0;
+    let committeeVisibleItems = 5;
+    let committeeAutoScrollInterval;
+
+    // Calculate visible items based on screen width
+    const calculateCommitteeVisibleItems = () => {
+        const containerWidth = committeeCarousel.parentElement.offsetWidth;
+        committeeVisibleItems = Math.floor(containerWidth / committeeItemWidth);
+        return Math.max(1, committeeVisibleItems);
+    };
+
+    // Calculate max index
+    const getCommitteeMaxIndex = () => {
+        return Math.max(0, committeeItems.length - calculateCommitteeVisibleItems());
+    };
+
+    // Create dots
+    const createCommitteeDots = () => {
+        committeeDotsContainer.innerHTML = '';
+        committeeDotsContainer.style.display = 'flex';
+
+        // For mobile, create dots based on individual items for scroll indication
+        const totalDots = isMobile() ? committeeItems.length : getCommitteeMaxIndex() + 1;
+
+        for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('button');
+            dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
+            dot.addEventListener('click', () => {
+                if (isMobile()) {
+                    // On mobile, scroll to the item
+                    const item = committeeItems[i];
+                    if (item) {
+                        item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        updateCommitteeMobileDots(i);
+                    }
+                } else {
+                    goToCommitteeSlide(i);
+                }
+            });
+            committeeDotsContainer.appendChild(dot);
+        }
+    };
+
+    // Update dots for mobile scroll
+    const updateCommitteeMobileDots = (activeIndex) => {
+        const dots = committeeDotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
+        });
+    };
+
+    // Track scroll position on mobile to update dots
+    if (isMobile()) {
+        const committeeCarouselWrapper = committeeCarousel.parentElement;
+        let scrollTimeout;
+        committeeCarouselWrapper.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const scrollLeft = committeeCarouselWrapper.scrollLeft;
+                const activeIndex = Math.round(scrollLeft / committeeItemWidth);
+                updateCommitteeMobileDots(Math.min(activeIndex, committeeItems.length - 1));
+            }, 50);
+        }, { passive: true });
+    }
+
+    // Update dots
+    const updateCommitteeDots = () => {
+        const dots = committeeDotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === committeeCurrentIndex);
+        });
+    };
+
+    // Go to slide (desktop only)
+    const goToCommitteeSlide = (index) => {
+        if (isMobile()) return; // Skip on mobile - use native scroll
+        const maxIndex = getCommitteeMaxIndex();
+        committeeCurrentIndex = Math.max(0, Math.min(index, maxIndex));
+        committeeCarousel.style.transform = `translateX(-${committeeCurrentIndex * committeeItemWidth}px)`;
+        updateCommitteeDots();
+    };
+
+    // Next slide
+    const nextCommitteeSlide = () => {
+        if (isMobile()) return;
+        const maxIndex = getCommitteeMaxIndex();
+        if (committeeCurrentIndex < maxIndex) {
+            goToCommitteeSlide(committeeCurrentIndex + 1);
+        } else {
+            goToCommitteeSlide(0); // Loop back to start
+        }
+    };
+
+    // Previous slide
+    const prevCommitteeSlide = () => {
+        if (isMobile()) return;
+        const maxIndex = getCommitteeMaxIndex();
+        if (committeeCurrentIndex > 0) {
+            goToCommitteeSlide(committeeCurrentIndex - 1);
+        } else {
+            goToCommitteeSlide(maxIndex); // Loop to end
+        }
+    };
+
+    // Auto scroll (desktop only)
+    const startCommitteeAutoScroll = () => {
+        if (isMobile()) return;
+        committeeAutoScrollInterval = setInterval(nextCommitteeSlide, 4000);
+    };
+
+    const stopCommitteeAutoScroll = () => {
+        clearInterval(committeeAutoScrollInterval);
+    };
+
+    // Event listeners for desktop
+    committeePrevBtn.addEventListener('click', () => {
+        stopCommitteeAutoScroll();
+        prevCommitteeSlide();
+        startCommitteeAutoScroll();
+    });
+
+    committeeNextBtn.addEventListener('click', () => {
+        stopCommitteeAutoScroll();
+        nextCommitteeSlide();
+        startCommitteeAutoScroll();
+    });
+
+    // Pause on hover (desktop)
+    committeeCarousel.addEventListener('mouseenter', stopCommitteeAutoScroll);
+    committeeCarousel.addEventListener('mouseleave', startCommitteeAutoScroll);
+
+    // Resize handler with inline debounce
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            createCommitteeDots();
+            if (!isMobile()) {
+                goToCommitteeSlide(Math.min(committeeCurrentIndex, getCommitteeMaxIndex()));
+            } else {
+                committeeCarousel.style.transform = 'none';
+            }
+        }, 200);
+    });
+
+    // Initialize
+    createCommitteeDots();
+    if (!isMobile()) {
+        startCommitteeAutoScroll();
+    }
+}
+
+// Committee Member Modal Functionality
+const committeeMembers = document.querySelectorAll('.committee-member');
+
+// Add click/tap event to committee member items
+if (committeeMembers.length > 0 && speakerModal) {
+    committeeMembers.forEach(item => {
+        // Track touch for distinguishing tap vs scroll
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+
+        const handleCommitteeClick = () => {
+            const committeeData = {
+                name: item.dataset.name,
+                title: item.dataset.title,
+                dept: item.dataset.dept || item.dataset.phone || '',
+                institution: item.dataset.institution,
+                image: item.dataset.image
+            };
+            openSpeakerModal(committeeData);
+        };
+
+        // Desktop click
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            handleCommitteeClick();
+        });
+
+        // Mobile touch - track start position
+        item.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+        }, { passive: true });
+
+        // Mobile touch - check if it was a tap (not scroll)
+        item.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const touchEndY = e.changedTouches[0].clientY;
+            const touchDuration = Date.now() - touchStartTime;
+
+            const deltaX = Math.abs(touchEndX - touchStartX);
+            const deltaY = Math.abs(touchEndY - touchStartY);
+
+            // If movement is small and duration is short, treat as tap
+            if (deltaX < 10 && deltaY < 10 && touchDuration < 300) {
+                e.preventDefault();
+                handleCommitteeClick();
+            }
+        }, { passive: false });
+    });
+}
+
 // Toggle Themes
 const toggleThemesBtn = document.getElementById('toggleThemesBtn');
 const moreThemes = document.getElementById('moreThemes');
@@ -367,29 +581,6 @@ if (toggleThemesBtn && moreThemes) {
             // Scroll to the button smoothly
             setTimeout(() => {
                 toggleThemesBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 100);
-        }
-    });
-}
-
-// Toggle Committee
-const toggleCommitteeBtn = document.getElementById('toggleCommitteeBtn');
-const moreCommittee = document.getElementById('moreCommittee');
-const toggleCommitteeIcon = document.getElementById('toggleCommitteeIcon');
-
-if (toggleCommitteeBtn && moreCommittee) {
-    toggleCommitteeBtn.addEventListener('click', () => {
-        moreCommittee.classList.toggle('hidden');
-        toggleCommitteeIcon.classList.toggle('rotate-180');
-
-        const btnText = toggleCommitteeBtn.querySelector('span');
-        if (moreCommittee.classList.contains('hidden')) {
-            btnText.textContent = 'View All Committee Members';
-        } else {
-            btnText.textContent = 'Show Less';
-            // Scroll to the button smoothly
-            setTimeout(() => {
-                toggleCommitteeBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }, 100);
         }
     });
@@ -679,3 +870,38 @@ console.log(`
     'color: #4b5563; font-size: 12px;',
     'color: #059669; font-size: 14px; font-weight: bold;'
 );
+
+// Video Player Controls
+const videoContainers = document.querySelectorAll('.video-container');
+
+videoContainers.forEach(container => {
+    const video = container.querySelector('video');
+    const overlay = container.querySelector('.video-play-overlay');
+
+    // Play video on overlay click only (not on controls)
+    overlay.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video.paused) {
+            video.play();
+        }
+    });
+
+    // Show/hide controls and overlay based on play state
+    video.addEventListener('play', () => {
+        overlay.classList.add('hidden');
+        video.setAttribute('controls', 'controls');
+    });
+
+    video.addEventListener('pause', () => {
+        if (video.currentTime !== video.duration) {
+            overlay.classList.remove('hidden');
+            video.removeAttribute('controls');
+        }
+    });
+
+    // Show overlay when video ends
+    video.addEventListener('ended', () => {
+        overlay.classList.remove('hidden');
+        video.removeAttribute('controls');
+    });
+});
